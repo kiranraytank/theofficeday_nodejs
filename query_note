@@ -1,0 +1,18 @@
+-- install this package also
+npm i express pg formidable path fs bcryptjs
+
+-- create table
+CREATE TABLE users(
+    id SERIAL,
+    name varchar(501),
+    email varchar(501),
+    age integer,
+    gender varchar(11),
+    password varchar(1024),
+    city varchar(201),
+    state varchar(201),
+    hobbies varchar(501),
+    profile_pic varchar(1024),
+    add_date timestamp with time zone NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT users_prikey PRIMARY KEY (id)
+)
